@@ -1,0 +1,103 @@
+<?php
+namespace Tests\Zend\Feed;
+
+class FeedTest extends \Tests\TestCase
+{
+    protected $classes = array(
+        '\Zend_Feed_Builder_Header_Itunes',
+        '\Zend_Feed_Builder_Entry',
+        '\Zend_Feed_Builder_Exception',
+        '\Zend_Feed_Builder_Header',
+        '\Zend_Feed_Builder_Interface',
+        '\Zend_Feed_Entry_Abstract',
+        '\Zend_Feed_Entry_Atom',
+        '\Zend_Feed_Entry_Rss',
+        '\Zend_Feed_Pubsubhubbub_Model_ModelAbstract',
+        '\Zend_Feed_Pubsubhubbub_Model_Subscription',
+        '\Zend_Feed_Pubsubhubbub_Model_SubscriptionInterface',
+        '\Zend_Feed_Pubsubhubbub_Subscriber_Callback',
+        '\Zend_Feed_Pubsubhubbub_CallbackAbstract',
+        '\Zend_Feed_Pubsubhubbub_CallbackInterface',
+        '\Zend_Feed_Pubsubhubbub_Exception',
+        '\Zend_Feed_Pubsubhubbub_HttpResponse',
+        '\Zend_Feed_Pubsubhubbub_Publisher',
+        '\Zend_Feed_Pubsubhubbub_Subscriber',
+        '\Zend_Feed_Reader_Collection_Author',
+        '\Zend_Feed_Reader_Collection_Category',
+        '\Zend_Feed_Reader_Collection_CollectionAbstract',
+        '\Zend_Feed_Reader_Entry_Atom',
+        '\Zend_Feed_Reader_Entry_Rss',
+        '\Zend_Feed_Reader_Extension_Atom_Entry',
+        '\Zend_Feed_Reader_Extension_Atom_Feed',
+        '\Zend_Feed_Reader_Extension_Content_Entry',
+        '\Zend_Feed_Reader_Extension_CreativeCommons_Entry',
+        '\Zend_Feed_Reader_Extension_CreativeCommons_Feed',
+        '\Zend_Feed_Reader_Extension_DublinCore_Entry',
+        '\Zend_Feed_Reader_Extension_DublinCore_Feed',
+        '\Zend_Feed_Reader_Extension_Podcast_Entry',
+        '\Zend_Feed_Reader_Extension_Podcast_Feed',
+        '\Zend_Feed_Reader_Extension_Slash_Entry',
+        '\Zend_Feed_Reader_Extension_Syndication_Feed',
+        '\Zend_Feed_Reader_Extension_Thread_Entry',
+        '\Zend_Feed_Reader_Extension_WellFormedWeb_Entry',
+        '\Zend_Feed_Reader_Extension_EntryAbstract',
+        '\Zend_Feed_Reader_Extension_FeedAbstract',
+        '\Zend_Feed_Reader_Feed_Atom_Source',
+        '\Zend_Feed_Reader_Feed_Atom',
+        '\Zend_Feed_Reader_Feed_Rss',
+        '\Zend_Feed_Reader_Collection',
+        '\Zend_Feed_Reader_EntryAbstract',
+        '\Zend_Feed_Reader_EntryInterface',
+        '\Zend_Feed_Reader_FeedAbstract',
+        '\Zend_Feed_Reader_FeedInterface',
+        '\Zend_Feed_Reader_FeedSet',
+        '\Zend_Feed_Writer_Exception_InvalidMethodException',
+        '\Zend_Feed_Writer_Extension_Atom_Renderer_Feed',
+        '\Zend_Feed_Writer_Extension_Content_Renderer_Entry',
+        '\Zend_Feed_Writer_Extension_DublinCore_Renderer_Entry',
+        '\Zend_Feed_Writer_Extension_DublinCore_Renderer_Feed',
+        '\Zend_Feed_Writer_Extension_ITunes_Renderer_Entry',
+        '\Zend_Feed_Writer_Extension_ITunes_Renderer_Feed',
+        '\Zend_Feed_Writer_Extension_ITunes_Entry',
+        '\Zend_Feed_Writer_Extension_ITunes_Feed',
+        '\Zend_Feed_Writer_Extension_Slash_Renderer_Entry',
+        '\Zend_Feed_Writer_Extension_Threading_Renderer_Entry',
+        '\Zend_Feed_Writer_Extension_WellFormedWeb_Renderer_Entry',
+        '\Zend_Feed_Writer_Extension_RendererAbstract',
+        '\Zend_Feed_Writer_Extension_RendererInterface',
+        '\Zend_Feed_Writer_Feed_FeedAbstract',
+        '\Zend_Feed_Writer_Renderer_Entry_Atom_Deleted',
+        '\Zend_Feed_Writer_Renderer_Entry_Atom',
+        '\Zend_Feed_Writer_Renderer_Entry_Rss',
+        '\Zend_Feed_Writer_Renderer_Feed_Atom_AtomAbstract',
+        '\Zend_Feed_Writer_Renderer_Feed_Atom_Source',
+        '\Zend_Feed_Writer_Renderer_Feed_Atom',
+        '\Zend_Feed_Writer_Renderer_Feed_Rss',
+        '\Zend_Feed_Writer_Renderer_RendererAbstract',
+        '\Zend_Feed_Writer_Renderer_RendererInterface',
+        '\Zend_Feed_Writer_Deleted',
+        '\Zend_Feed_Writer_Entry',
+        '\Zend_Feed_Writer_Feed',
+        '\Zend_Feed_Writer_Source',
+        '\Zend_Feed_Abstract',
+        '\Zend_Feed_Atom',
+        '\Zend_Feed_Builder',
+        '\Zend_Feed_Element',
+        '\Zend_Feed_Exception',
+        '\Zend_Feed_Pubsubhubbub',
+        '\Zend_Feed_Reader',
+        '\Zend_Feed_Rss',
+        '\Zend_Feed_Writer',
+        '\Zend_Feed'
+    );
+
+    /**
+     * Ensure that the composer autoloader is finding the classes correctly.
+     */
+    public function testCanFindClasses()
+    {
+        foreach ($this->classes as $class) {
+            $this->assertTrue(class_exists($class) || interface_exists($class));
+        }
+    }
+}
